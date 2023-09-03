@@ -3,7 +3,7 @@ header#header {
   top: 0;
   z-index: 100;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1920px;
   margin-inline: auto;
   background-color: transparent;
   nav.nav_desktop {
@@ -15,9 +15,19 @@ header#header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      img {
-        width: 40px;
-        height: auto;
+      .nav_image_container {
+        display: flex;
+        column-gap: 7px;
+        align-items: center;
+        img.logo_image {
+          width: 40px;
+          height: auto;
+        }
+        img.logo_text {
+          height: 33.5px;
+          width: auto;
+          display: none;
+        }
       }
       ul {
         display: flex;

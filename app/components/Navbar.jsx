@@ -6,18 +6,31 @@ import styles from "@/public/styles/components/navbar_desktop.module.scss";
 
 // ASSET IMPORTS
 import logo from "@/public/images/logo.png";
+import logoText from "@/public/images/logo_text.png";
 
-export default function Navbar({ headerRef, historyLinkRef, teamLinkRef }) {
-  const navLinks = [
-    { title: "01. history", url: "#history" },
-    { title: "02. team", url: "#climb" },
-  ];
-
+export default function Navbar({
+  headerRef,
+  historyLinkRef,
+  teamLinkRef,
+  logoTextRef,
+}) {
   return (
     <header id={styles.header} ref={headerRef}>
       <nav className={styles.nav_desktop}>
         <div className={styles.nav_container}>
-          <Image src={logo} alt='Los Angeles Mountains logo' />
+          <div className={styles.nav_image_container}>
+            <Image
+              className={styles.logo_image}
+              src={logo}
+              alt='Los Angeles Mountains logo'
+            />
+            <Image
+              className={styles.logo_text}
+              src={logoText}
+              alt='Los Angeles Mountains logo text'
+              ref={logoTextRef}
+            />
+          </div>
           <ul className={styles.nav_links}>
             <li>
               <Link href={"#history"} ref={historyLinkRef}>

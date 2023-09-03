@@ -14,8 +14,8 @@ import Footer from "@/app/components/Footer";
 
 // ASSET IMPORTS
 import historyImg from "@/public/images/2. history_section/history.png";
-import heroTextHistory from "@/public/images/2. history_section/hero_text_test.svg";
-import heroTextClimb from "@/public/images/3. climb_section/hero_text_test.svg";
+import heroTextHistory from "@/public/images/2. history_section/hero_text.svg";
+import heroTextClimb from "@/public/images/3. climb_section/hero_text.svg";
 
 // GSAP
 import { gsap } from "gsap";
@@ -26,33 +26,35 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const headerRef = useRef(null);
   const heroRef = useRef(null);
+  const logoTextRef = useRef(null);
   const historyLinkRef = useRef(null);
   const teamLinkRef = useRef(null);
 
   useEffect(() => {
-    gsap.to(headerRef.current, {
-      backgroundColor: "#fff",
-      duration: 0.1,
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "bottom center",
-        end: "150% center",
-        toggleActions: "play pause resume reset",
-        scrub: true,
-        markers: true,
-      },
-    });
-    gsap.to([historyLinkRef.current, teamLinkRef.current], {
-      color: "#000",
-      duration: 0.1,
-      scrollTrigger: {
+    function triggerFunc() {
+      return {
         trigger: heroRef.current,
         start: "bottom center",
         end: "150% center",
         toggleActions: "play pause resume reset",
         scrub: true,
         // markers: true,
-      },
+      };
+    }
+    gsap.to(headerRef.current, {
+      backgroundColor: "#fff",
+      duration: 0.1,
+      scrollTrigger: triggerFunc(),
+    });
+    gsap.to([historyLinkRef.current, teamLinkRef.current], {
+      color: "#414f6b",
+      duration: 0.1,
+      scrollTrigger: triggerFunc(),
+    });
+    gsap.to(logoTextRef.current, {
+      display: "block",
+      duration: 0.1,
+      scrollTrigger: triggerFunc(),
     });
   }, []);
 
@@ -62,6 +64,7 @@ export default function Home() {
         headerRef={headerRef}
         historyLinkRef={historyLinkRef}
         teamLinkRef={teamLinkRef}
+        logoTextRef={logoTextRef}
       />
       <main id={styles.main}>
         {/* SECTION: HERO */}

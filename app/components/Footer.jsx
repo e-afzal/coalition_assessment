@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "@/public/styles/components/footer.module.scss";
 
 // ASSET IMPORT
-import logo from "@/public/images/logo-footer.png";
+import logo from "@/public/images/logo-footer_text.png";
 
 export default function Footer() {
   return (
