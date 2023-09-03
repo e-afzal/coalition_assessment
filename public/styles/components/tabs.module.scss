@@ -1,0 +1,72 @@
+.TabsRoot {
+  width: 100%;
+  background-color: #414f6b;
+  .TabsList {
+    display: flex;
+    column-gap: 2rem;
+    max-width: 900px;
+    margin-inline: auto;
+    .TabsTrigger {
+      padding: 5px 10px;
+      border: none;
+      font-family: "Oswald", sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.2rem);
+      text-transform: uppercase;
+      background-color: transparent;
+      color: #b1b3be;
+      cursor: pointer;
+      &[data-state="active"] {
+        background-color: #b1b3be;
+        text-decoration: underline;
+        color: #414f6b;
+      }
+    }
+  }
+  .content_container {
+    .TabsContent {
+      height: 545px;
+      background-color: #fff;
+      background: url("/images/3.\ climb_section/climb.png") no-repeat center
+        bottom/cover;
+      position: relative;
+      //   display: flex;
+      //   align-items: center;
+
+      .schedule_container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-75%);
+        margin-left: 15vw;
+        background-color: rgba($color: #fff, $alpha: 0.8);
+        padding-block: 2rem;
+        padding-inline: 2rem;
+        max-width: 350px;
+        h3 {
+          font-family: "Oswald", sans-serif;
+          font-weight: 800;
+          color: #414f6b;
+          font-size: 3.4rem;
+          letter-spacing: -1px;
+          text-transform: uppercase;
+          padding-inline: 2.5rem;
+        }
+        ul {
+          margin-top: 1rem;
+          padding-inline: 2.5rem;
+          li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+            column-gap: 5rem;
+            p {
+              font-family: "Lato", sans-serif;
+              font-size: 1.6rem;
+              font-weight: 100;
+            }
+          }
+        }
+      }
+    }
+  }
+}

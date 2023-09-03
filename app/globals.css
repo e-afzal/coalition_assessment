@@ -1,0 +1,63 @@
+/* FONT IMPORTS */
+/* @font-face {
+    font-family: "ddin-regular";
+    src: url("/fonts/ddin-regular.otf");
+    font-display: swap;
+  } */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none !important;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin-inline: auto;
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #fff;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+/* SWIPER PAGINATION */
+.swiper-pagination-bullet {
+  background-color: #e1f1ff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}

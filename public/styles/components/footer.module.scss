@@ -1,0 +1,39 @@
+footer#footer {
+  background-color: #5d6b85;
+  padding-block: 1rem;
+  .footer_container {
+    padding: 1.5rem 2.5rem;
+    max-width: 940px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo_container {
+      img {
+        width: 4rem;
+        height: auto;
+      }
+    }
+    .copyright_content {
+      p {
+        color: hsl(219, 24%, 67%);
+        font-size: 1.4rem;
+        font-family: "Lato", sans-serif;
+        font-style: italic;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer#footer {
+    .footer_container {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1rem;
+    }
+  }
+}

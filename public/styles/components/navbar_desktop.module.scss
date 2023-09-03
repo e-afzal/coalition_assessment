@@ -1,0 +1,38 @@
+header#header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  background-color: transparent;
+  nav.nav_desktop {
+    padding-inline: clamp(2.5rem, 5vw, 5rem);
+    padding-block: 10px;
+    .nav_container {
+      max-width: 1000px;
+      margin-inline: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 40px;
+        height: auto;
+      }
+      ul {
+        display: flex;
+        column-gap: 4rem;
+        li {
+          a {
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            text-transform: uppercase;
+            text-underline-offset: 5px;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
